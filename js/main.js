@@ -23,8 +23,10 @@
                     alert('入力してください。');
                     return;
                 }
+
                 const item = {
                     title: this.newItem,
+                    createAt: this.nowDate,
                     isDone: false
                 };
                 this.todos.push(item);
@@ -43,6 +45,19 @@
         computed: {
             remaining: function() {
                 return this.todos.filter(todo => !todo.isDone);
+            },
+            nowDate: function() {
+                const d = new Date;
+                const dayOfTheWeeks = ["日","月","火","水","木","金","土"];
+                const year = d.getFullYear();
+                const month = d.getMonth() + 1;
+                const week = d.getDay();
+                const day = d.getDate();
+                const hour = d.getHours();
+                const minute = d.getMinutes();
+                const date = year + "/" + month + "/" + day + "/ " + "(" + dayOfTheWeeks[week] + ")";
+                const time = hour + ":" + minute;
+                return date + " " + time;
             }
         }
     });
