@@ -1,0 +1,52 @@
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+#app h1{
+    font-size: 16px;
+    border-bottom: 1px solid #dddddd;
+}
+
+#app li {
+    line-height: 1.5;
+}
+
+#app input[type="text"] {
+    padding: 2px;
+}
+
+.command {
+    font-size: 12px;
+    cursor: pointer;
+    color: #08c;
+}
+
+#app ul {
+    padding: 0;
+    list-style: none;
+}
+
+#app li {
+    margin-bottom: 20px;
+}
+
+#app li > span.done {
+    text-decoration: line-through;
+    color: #bbbbbb;
+}
+
+.info {
+    color: #bbbbbb;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.create-at {
+    display:block;
+}
